@@ -1,0 +1,41 @@
+import PropTypes from "prop-types";
+import Link from "next/link";
+
+const Button = ({ text, link, className, onClick }) => {
+  const isExternalLink = link.startsWith("http");
+
+  const handleClick = (event) => {
+    if (isExternalLink) {
+      window.open(link, "_blank", "noopener noreferrer");
+    } else if (onClick) {
+      onClick(event);
+    }
+  };
+
+  return (
+    <button className={className} onClick={onClick ? handleClick : null}>
+      {isExternalLink ? (
+        <a
+          href={link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center"
+        >
+          <span className="mr-2">{text}</span>
+          [External]
+        </a>
+      ) : (
+        <Link href={link}>{text}</Link>
+      )}
+    </button>
+  );
+};
+
+Button.propTypes = {
+  text: PropTypes.string.isRequired,
+  link: PropTypes.string,
+  className: PropTypes.string,
+  onClick: PropTypes.func,
+};
+
+export default Button;
