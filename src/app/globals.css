@@ -14,16 +14,37 @@ main {
 }
 
 .navbar {
-  @apply flex items-center justify-between bg-gray-100 w-screen px-14 py-3;
+  @apply relative flex flex-wrap items-center justify-between px-2 py-2 bg-gray-100 text-gray-900;
+}
+
+.navbar-wrap {
+  @apply container px-4 mx-auto flex flex-wrap items-center justify-between;
+}
+
+.nav-responsive {
+  @apply w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start;
+}
+
+.nav-logo {
+  @apply whitespace-nowrap;
+}
+.nav-hamburger {
+  @apply cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none;
 }
 
 .nav-menu {
-  @apply flex;
+  @apply lg:flex flex-grow items-center;
+}
+.nav-ul {
+  @apply flex flex-col lg:flex-row list-none lg:ml-auto;
 }
 
-.menu-item {
-  @apply px-3 text-base font-medium text-gray-900;
+.nav-menu-item {
+  @apply px-3 py-2 flex items-center text-sm uppercase font-medium leading-snug  hover:opacity-75;
 }
-.active {
-  @apply text-green-600
+.nav-menu-active {
+  @apply text-green-600;
+}
+.nav-menu-inactive {
+  @apply text-gray-900;
 }
