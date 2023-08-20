@@ -31,7 +31,7 @@ const Button = ({ text, link, className, onClick }) => {
   );
 };
 
-Button.propTypes = {
+Button.PropTypes = {
   text: PropTypes.string.isRequired,
   link: PropTypes.string,
   className: PropTypes.string,

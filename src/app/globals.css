@@ -6,19 +6,32 @@ main {
   @apply bg-white;
 }
 
-.brand {
-  @apply font-medium text-2xl text-green-600;
-}
-.brand-in {
-  @apply text-gray-900;
+/* MAIN PARTS */
+.main-content {
+  @apply flex flex-col items-center min-h-screen px-3 md:px-6 lg:px-12 py-12 bg-green-200;
 }
 
+.brand {
+  @apply font-semibold text-2xl text-green-600;
+}
+.brand-in {
+  @apply text-gray-900 font-medium;
+}
+
+.default-title-container {
+  @apply flex w-screen items-center justify-center py-4;
+}
+.default-title-content {
+  @apply font-bold text-center text-2xl text-green-600 py-4;
+}
+
+/* NAVBAR */
 .navbar {
   @apply relative flex flex-wrap items-center justify-between px-2 py-2 bg-gray-100 text-gray-900;
 }
 
 .navbar-wrap {
-  @apply container px-4 mx-auto flex flex-wrap items-center justify-between;
+  @apply container px-4 mx-6 flex flex-wrap items-center justify-between;
 }
 
 .nav-responsive {
@@ -40,11 +53,51 @@ main {
 }
 
 .nav-menu-item {
-  @apply px-3 py-2 flex items-center text-sm uppercase font-medium leading-snug  hover:opacity-75;
+  @apply px-3 py-2 flex items-center text-xs uppercase font-semibold leading-snug  hover:opacity-75 duration-300;
 }
 .nav-menu-active {
   @apply text-green-600;
 }
 .nav-menu-inactive {
   @apply text-gray-900;
+}
+
+/* BLOG-GRID */
+.blog-grid {
+  @apply grid grid-cols-1 gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3;
+}
+.blog-grid-container {
+  @apply flex flex-col items-stretch justify-between max-w-md rounded border-2 border-green-200 bg-green-100 hover:bg-white duration-300 h-96;
+}
+.blog-grid-section {
+  @apply px-6 py-2;
+}
+.blog-grid-img {
+  @apply flex items-center justify-center p-2;
+}
+.blog-grid-title {
+  @apply font-bold text-base mb-2 text-gray-900 hover:opacity-80 duration-300;
+}
+.blog-grid-content {
+  @apply text-gray-500 text-sm text-justify overflow-hidden;
+}
+.blog-grid-footer {
+  @apply px-6 pt-4 pb-2;
+}
+.blog-grid-footer-content {
+  @apply text-gray-600 text-xs;
+}
+
+/* BLOG-POSTPAGE */
+.blog-post-body {
+  @apply px-6 py-8 my-4 w-full bg-white rounded-lg;
+}
+.blog-post-content {
+  @apply text-gray-900 text-base text-justify;
+}
+.blog-post-footer {
+  @apply px-6 py-4 mb-4 w-full rounded-lg bg-green-400;
+}
+.blog-post-footer-content {
+  @apply font-medium text-sm;
 }
