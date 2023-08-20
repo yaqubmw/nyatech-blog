@@ -11,7 +11,7 @@ const BlogPostPage = ({ title, date, content, imageUrl, author }) => {
   return (
     <>
       <DefaultTitleJumbo title={title} imageUrl={postImage} />
-      <div className="main-content">
+      <div className="blogpost-main-content">
         <div className="blog-post-body">
           <p className="blog-post-content">{content}</p>
         </div>

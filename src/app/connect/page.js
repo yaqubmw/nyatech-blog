@@ -1,9 +1,9 @@
-import Header from "@components/parts/Header";
+import Socialpage from "@pages/Socialpage";
 
 export default function ConnectMe() {
   return (
     <>
-      <Header />
+      <Socialpage />
     </>
   );
 }

@@ -1,5 +1,6 @@
 import { fetchBlogPosts } from "@api/dataBlog";
 import BlogPostPage from "@components/blog/BlogPostPage";
+import Footer from "@components/parts/Footer";
 import Header from "@components/parts/Header";
 
 export async function generateStaticParams() {
@@ -23,6 +24,7 @@ export default async function BlogPost({ params }) {
         author={post.author}
         imageUrl={null}
       />
+      <Footer />
     </main>
   );
 }

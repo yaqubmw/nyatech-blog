@@ -6,8 +6,7 @@ export default async function BlogPosts() {
   const posts = await fetchBlogPosts();
   return (
     <>
-      <DefaultTitleJumbo title="Blog" />
-      <div className="main-content">
+      <div className="main-content bg-slate-700">
         <div className="blog-grid">
           {posts.map((post) => (
             <BlogCard

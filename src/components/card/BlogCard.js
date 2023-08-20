@@ -18,11 +18,18 @@ const BlogCard = ({ link, title, date, content, imageUrl, author }) => {
     <div className="blog-grid-container">
       <div className="blog-grid-img">
         {imageUrl ? (
-          <Image width="300" height="200" src={imageUrl} alt={title} />
+          <Image
+            width="800"
+            height="600"
+            layout="responsive"
+            src={imageUrl}
+            alt={title}
+          />
         ) : (
           <Image
-            width="300"
-            height="200"
+            width="800"
+            height="600"
+            layout="responsive"
             src={defaultImageUrl}
             alt="Default Image"
           />
