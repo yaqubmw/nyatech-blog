@@ -1,26 +1,29 @@
 import BlogCard from "@components/card/BlogCard";
-import { fetchBlogPosts } from "@api/dataBlog";
-import DefaultTitleJumbo from "@components/title/DefaultTitleJumbo";
+import { fetchBlogPosts } from "@lib/dataBlog";
 
 export default async function BlogPosts() {
-  const posts = await fetchBlogPosts();
-  return (
-    <>
-      <div className="main-content bg-slate-700">
-        <div className="blog-grid">
-          {posts.map((post) => (
+  const response = await fetchBlogPosts(); // Fetch the data
+  const posts = response.posts;
+
+  const content = (
+    <div className="main-content bg-slate-700">
+      <div className="blog-grid">
+        {posts.map((post) => {
+          return (
             <BlogCard
               key={post.id}
               link={post.id}
               title={post.title}
-              date={post.date_published}
-              content={post.content}
+              reactions={post.reactions}
+              content={post.body}
               imageUrl={null}
-              author={post.author}
+              author={post.userId}
             />
-          ))}
-        </div>
+          );
+        })}
       </div>
-    </>
+    </div>
   );
+
+  return content;
 }
