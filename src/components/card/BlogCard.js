@@ -19,19 +19,27 @@ async function BlogCard({ link, title, reactions, content, imageUrl, author }) {
       <div className="blog-grid-img">
         {imageUrl ? (
           <Image
-            width="800"
-            height="600"
-            layout="responsive"
+            sizes="100vw"
+            style={{
+              width: "100%",
+              height: "auto",
+            }}
             src={imageUrl}
             alt={title}
+            width={500}
+            height={300}
           />
         ) : (
           <Image
-            width="800"
-            height="600"
-            layout="responsive"
+            sizes="100vw"
+            style={{
+              width: "100%",
+              height: "auto",
+            }}
             src={defaultImageUrl}
             alt="Default Image"
+            width={500}
+            height={300}
           />
         )}
       </div>
