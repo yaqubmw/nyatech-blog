@@ -8,6 +8,7 @@ async function BlogPostPage({ title, reactions, content, imageUrl, author }) {
     "https://res.cloudinary.com/ymwmedia/image/upload/v1692507110/dummy-image-post_vu8zlo.webp";
 
   const postImage = imageUrl ? imageUrl : defaultImageUrl;
+  
   const authorData = await fetchAuthor({ authorId: author });
 
   return (

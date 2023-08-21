@@ -1,4 +1,5 @@
 import { fetchBlogPosts } from "@lib/dataBlog";
+import { fetchPost } from "@lib/dataPost";
 import BlogPostPage from "@components/blog/BlogPostPage";
 import Footer from "@components/parts/Footer";
 import Header from "@components/parts/Header";
@@ -13,9 +14,7 @@ export async function generateStaticParams() {
 }
 
 export default async function BlogPost({ params }) {
-  const response = await fetchBlogPosts();
-  const posts = response.posts;
-  const post = posts.find((post) => post.id.toString() === params.id);
+  const post = await fetchPost({ postId: params.id });
   return (
     <main>
       <Header />
