@@ -1,4 +1,4 @@
-import PropTypes from "prop-types";
+import propTypes from "prop-types";
 
 const DefaultTitleJumbo = ({ title, imageUrl }) => {
   const defaultImageUrl =
@@ -25,9 +25,9 @@ const DefaultTitleJumbo = ({ title, imageUrl }) => {
   );
 };
 
-DefaultTitleJumbo.PropTypes = {
-  title: PropTypes.string.isRequired,
-  imageUrl: PropTypes.string,
+DefaultTitleJumbo.propTypes = {
+  title: propTypes.string.isRequired,
+  imageUrl: propTypes.string,
 };
 
 export default DefaultTitleJumbo;

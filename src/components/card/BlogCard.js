@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import PropTypes from "prop-types";
-import { fetchAuthor } from "../../../lib/dataAuthor";
+import propTypes from "prop-types";
+import { fetchAuthor } from "@lib/dataAuthor";
 
 async function BlogCard({ link, title, reactions, content, imageUrl, author }) {
   const defaultImageUrl =
@@ -64,13 +64,13 @@ async function BlogCard({ link, title, reactions, content, imageUrl, author }) {
   );
 }
 
-BlogCard.PropTypes = {
-  link: PropTypes.number,
-  title: PropTypes.string,
-  reactions: PropTypes.string,
-  content: PropTypes.string,
-  imageUrl: PropTypes.string,
-  author: PropTypes.string,
+BlogCard.propTypes = {
+  link: propTypes.number,
+  title: propTypes.string,
+  reactions: propTypes.number,
+  content: propTypes.string,
+  imageUrl: propTypes.string,
+  author: propTypes.number,
 };
 
 export default BlogCard;

@@ -1,4 +1,4 @@
-import PropTypes from "prop-types";
+import propTypes from "prop-types";
 import Link from "next/link";
 
 const Button = ({ text, link, className, onClick }) => {
@@ -31,11 +31,11 @@ const Button = ({ text, link, className, onClick }) => {
   );
 };
 
-Button.PropTypes = {
-  text: PropTypes.string.isRequired,
-  link: PropTypes.string,
-  className: PropTypes.string,
-  onClick: PropTypes.func,
+Button.propTypes = {
+  text: propTypes.string.isRequired,
+  link: propTypes.string,
+  className: propTypes.string,
+  onClick: propTypes.func,
 };
 
 export default Button;

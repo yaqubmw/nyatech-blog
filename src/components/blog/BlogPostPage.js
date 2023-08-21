@@ -1,6 +1,6 @@
 import DefaultTitleJumbo from "@components/title/DefaultTitleJumbo";
 import { fetchAuthor } from "@lib/dataAuthor";
-import PropTypes from "prop-types";
+import propTypes from "prop-types";
 import Image from "next/image";
 
 async function BlogPostPage({ title, reactions, content, imageUrl, author }) {
@@ -23,7 +23,11 @@ async function BlogPostPage({ title, reactions, content, imageUrl, author }) {
             <div className="flex flex-col md:flex-row items-center justify-start">
               <div className="w-24 h-32 rounded-lg overflow-hidden flex items-center justify-center bg-slate-300">
                 <Image
-                  layout="responsive"
+                  sizes="100vw"
+                  style={{
+                    width: "100%",
+                    height: "auto",
+                  }}
                   width={300}
                   height={400}
                   src={authorData.image}
@@ -47,11 +51,11 @@ async function BlogPostPage({ title, reactions, content, imageUrl, author }) {
 }
 
 BlogPostPage.propTypes = {
-  title: PropTypes.string,
-  reactions: PropTypes.string,
-  content: PropTypes.string,
-  imageUrl: PropTypes.string,
-  author: PropTypes.string,
+  title: propTypes.string,
+  reactions: propTypes.number,
+  content: propTypes.string,
+  imageUrl: propTypes.string,
+  author: propTypes.number,
 };
 
 export default BlogPostPage;

@@ -1,4 +1,4 @@
-import PropTypes from "prop-types";
+import propTypes from "prop-types";
 
 const DefaultTitle = ({ text }) => {
   return (
@@ -8,8 +8,8 @@ const DefaultTitle = ({ text }) => {
   );
 };
 
-DefaultTitle.PropTypes = {
-  text: PropTypes.string.isRequired,
+DefaultTitle.propTypes = {
+  text: propTypes.string.isRequired,
 };
 
 export default DefaultTitle;
