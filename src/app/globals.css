@@ -21,7 +21,7 @@ main {
 
 /* DEFAULT-TITLE */
 .default-title-container {
-  @apply flex w-screen items-center justify-center bg-black py-4;
+  @apply flex w-full items-center justify-center bg-black py-4;
 }
 .default-title-content {
   @apply font-bold text-center text-4xl text-green-600 py-4;
