@@ -6,7 +6,7 @@ export default async function BlogPosts() {
   const posts = response.posts;
 
   const content = (
-    <div className="main-content bg-slate-700">
+    <div className="main-content">
       <div className="blog-grid">
         {posts.map((post) => {
           return (

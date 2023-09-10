@@ -1,8 +1,8 @@
 export default function SocialHero() {
   return (
-    <div className="flex items-center justify-center h-screen">
-      <div className="grid gap-4 grid-cols-2 md:grid-cols-3 w-full h-full content-evenly">
-        <div className="max-w-lg flex items-center justify-center text-gray-900 hover:text-green-600 duration-500">
+    <div className="social-hero-flex">
+      <div className="social-hero-grid">
+        <div className="social-hero-icon">
           <a
             href="https://www.facebook.com/yaqubmw"
             target="_blank"
@@ -18,7 +18,7 @@ export default function SocialHero() {
             </svg>
           </a>
         </div>
-        <div className="max-w-lg flex items-center justify-center text-gray-900 hover:text-green-600 duration-500">
+        <div className="social-hero-icon">
           <a
             href="https://twitter.com/yaqubmw"
             target="_blank"
@@ -34,7 +34,7 @@ export default function SocialHero() {
             </svg>
           </a>
         </div>
-        <div className="max-w-lg flex items-center justify-center text-gray-900 hover:text-green-600 duration-500">
+        <div className="social-hero-icon">
           <a
             href="mailto:yaqubmw@gmail.com"
             target="_blank"
@@ -51,7 +51,7 @@ export default function SocialHero() {
             </svg>
           </a>
         </div>
-        <div className="max-w-lg flex items-center justify-center text-gray-900 hover:text-green-600 duration-500">
+        <div className="social-hero-icon">
           <a
             href="https://www.instagram.com/yaqubmw/"
             target="_blank"
@@ -67,7 +67,7 @@ export default function SocialHero() {
             </svg>
           </a>
         </div>
-        <div className="max-w-lg flex items-center justify-center text-gray-900 hover:text-green-600 duration-500">
+        <div className="social-hero-icon">
           <a
             href="https://id.linkedin.com/in/yaqubmw"
             target="_blank"
@@ -83,7 +83,7 @@ export default function SocialHero() {
             </svg>
           </a>
         </div>
-        <div className="max-w-lg flex items-center justify-center text-gray-900 hover:text-green-600 duration-500">
+        <div className="social-hero-icon">
           <a
             href="https://github.com/yaqubmw"
             target="_blank"

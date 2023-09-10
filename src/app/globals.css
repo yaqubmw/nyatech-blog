@@ -3,28 +3,28 @@
 @tailwind utilities;
 
 main {
-  @apply bg-white;
+  @apply bg-white dark:bg-slate-900 transition-all duration-500;
 }
 
 /* MAIN PARTS */
 .main-content {
-  @apply flex flex-col items-center min-h-screen px-3 md:px-6 lg:px-12 py-12;
+  @apply flex flex-col items-center min-h-screen px-3 md:px-6 lg:px-12 py-12 transition-all duration-500;
 }
 
 /* BRAND-LOGO */
 .brand {
-  @apply font-semibold text-2xl text-green-600;
+  @apply font-semibold text-2xl text-green-600 dark:text-green-500 transition-all duration-500;
 }
 .brand-in {
-  @apply text-gray-900 font-medium;
+  @apply text-gray-900 dark:text-gray-100 font-medium transition-all duration-500;
 }
 
 /* DEFAULT-TITLE */
 .default-title-container {
-  @apply flex w-full items-center justify-center bg-black py-4;
+  @apply flex w-full items-center justify-center bg-white dark:bg-slate-900 py-4 transition-all duration-500;
 }
 .default-title-content {
-  @apply font-bold text-center text-4xl text-green-600 py-4;
+  @apply font-bold text-center text-4xl text-green-600 dark:text-green-500 py-4 transition-all duration-500;
 }
 
 /* DEFAULT-TITLE-JUMBO */
@@ -38,15 +38,15 @@ main {
   @apply flex h-full items-center justify-center;
 }
 .title-jumbo-format {
-  @apply px-6 text-center text-white md:px-12;
+  @apply px-6 text-center text-white md:px-12 transition-all duration-500;
 }
 .title-jumbo-text {
-  @apply mt-2 mb-16 text-5xl font-bold tracking-tight md:text-6xl xl:text-7xl;
+  @apply mt-2 mb-16 text-5xl font-bold tracking-tight md:text-6xl xl:text-7xl transition-all duration-500;
 }
 
 /* NAVBAR */
 .navbar {
-  @apply relative flex flex-wrap items-center justify-between px-2 py-2 bg-gray-100 text-gray-900;
+  @apply relative flex flex-wrap items-center justify-between px-2 py-2 bg-white text-gray-900 dark:bg-slate-600 dark:text-slate-200 transition-all duration-500;
 }
 
 .navbar-wrap {
@@ -54,7 +54,7 @@ main {
 }
 
 .nav-responsive {
-  @apply w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start;
+  @apply w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start transition-all duration-500;
 }
 
 .nav-logo {
@@ -68,17 +68,17 @@ main {
   @apply lg:flex flex-grow items-center;
 }
 .nav-ul {
-  @apply flex flex-col lg:flex-row list-none lg:ml-auto;
+  @apply flex flex-col justify-center items-end lg:items-center w-full lg:w-auto lg:flex-row list-none lg:ml-auto transition-all duration-500;
 }
 
 .nav-menu-item {
-  @apply px-3 py-2 flex items-center text-xs uppercase font-semibold leading-snug  hover:opacity-75 duration-300;
+  @apply mx-3 my-2 flex items-center text-sm font-semibold leading-snug hover:text-green-600 dark:hover:text-green-500 transition-all duration-500;
 }
 .nav-menu-active {
-  @apply text-green-600;
+  @apply text-green-600 dark:text-green-500;
 }
 .nav-menu-inactive {
-  @apply text-gray-900;
+  @apply text-gray-800 dark:text-gray-200;
 }
 
 /* BLOG-GRID */
@@ -86,7 +86,7 @@ main {
   @apply grid grid-cols-1 gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3;
 }
 .blog-grid-container {
-  @apply flex flex-col justify-between max-w-md rounded bg-slate-100 hover:bg-slate-300 duration-300 h-96;
+  @apply flex flex-col justify-between max-w-md rounded border border-slate-300 hover:shadow-lg shadow-slate-300 dark:border-slate-700 dark:shadow-slate-800 transition-all duration-500;
 }
 .blog-grid-section {
   @apply px-6 py-2;
@@ -95,31 +95,31 @@ main {
   @apply flex items-center justify-center p-4;
 }
 .blog-grid-title {
-  @apply font-bold text-base mb-2 text-gray-900 hover:opacity-80 duration-300;
+  @apply font-bold text-base mb-2 text-green-600 dark:text-green-400 hover:opacity-75 transition-all duration-500;
 }
 .blog-grid-content {
-  @apply text-gray-500 text-sm text-justify overflow-hidden;
+  @apply text-gray-600 dark:text-gray-300 text-sm text-justify overflow-hidden transition-all duration-500;
 }
 .blog-grid-footer {
   @apply px-6 pt-4 pb-2;
 }
 .blog-grid-footer-content {
-  @apply text-gray-900 text-xs;
+  @apply text-gray-900 dark:text-gray-400 text-xs transition-all duration-500;
 }
 
 /* BLOG-POSTPAGE */
 .blogpost-main-content {
-  @apply flex flex-col items-center px-3 md:px-6 lg:px-12 py-12 bg-slate-700;
+  @apply flex flex-col items-center px-3 md:px-6 lg:px-12 py-12;
 }
 
 .blog-post-body {
-  @apply px-6 py-8 my-4 w-full bg-white rounded-lg;
+  @apply px-6 py-8 my-4 w-full bg-slate-100 dark:bg-slate-800 rounded-lg shadow-lg dark:shadow-slate-800 transition-all duration-500;
 }
 .blog-post-content {
-  @apply text-gray-900 text-base text-justify;
+  @apply text-gray-900 dark:text-gray-100 text-base text-justify transition-all duration-500;
 }
 .blog-post-footer {
-  @apply flex flex-col px-6 py-4 mb-4 w-full rounded-lg bg-green-400;
+  @apply flex flex-col px-6 py-4 mb-4 w-full rounded-lg text-gray-900 dark:text-gray-50 bg-green-400 dark:bg-green-700 transition-all duration-500;
 }
 .blog-post-footer-content {
   @apply font-medium text-sm;
@@ -132,4 +132,43 @@ main {
 }
 .blog-post-footer-bio-name {
   @apply font-medium text-lg;
+}
+.blog-post-footer-grid {
+  @apply flex flex-col md:flex-row items-center justify-start;
+}
+.blog-post-footer-canvas {
+  @apply w-24 h-32 rounded-lg overflow-hidden flex items-center justify-center bg-slate-300;
+}
+.blog-post-footer-flex {
+  @apply flex flex-col justify-evenly mx-4 h-32;
+}
+/* SOCIAL HERO */
+.social-hero-flex {
+  @apply flex items-center justify-center h-screen;
+}
+.social-hero-grid {
+  @apply grid gap-4 grid-cols-2 md:grid-cols-3 w-full h-full content-evenly;
+}
+.social-hero-icon {
+  @apply max-w-lg flex items-center justify-center text-gray-900 dark:text-gray-200 dark:hover:text-green-400 hover:text-green-600 transition-all duration-500;
+}
+
+/* FOOTER */
+.footer-main {
+  @apply bg-neutral-900 text-center text-white;
+}
+.footer-flex-main {
+  @apply flex justify-center items-center py-10;
+}
+.footer-flex-content {
+  @apply flex justify-center items-center;
+}
+.footer-content-icon {
+  @apply px-2 text-white hover:text-green-400 transition-all duration-500;
+}
+.footer-copyright {
+  @apply flex items-center justify-center p-4 text-center text-gray-900 bg-white dark:text-gray-100 dark:bg-black text-sm font-medium transition-all duration-500;
+}
+.footer-copyright-nyatech {
+  @apply font-semibold hover:text-green-600 dark:hover:text-green-400 transition-all duration-500;
 }

@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import Button from "@components/button/Button";
 import BrandLogo from "@components/parts/BrandLogo";
 import Link from "next/link";
+import DarkModeToggle from "@components/toggle/DarkModeToggle";
 
 export default function Header() {
   const [activeItem, setActiveItem] = useState(null);
@@ -46,6 +47,7 @@ export default function Header() {
               </svg>
             </button>
           </div>
+
           <div
             className={"nav-menu" + (navbarOpen ? " flex" : " hidden")}
             id="nav-responsive"
@@ -82,6 +84,9 @@ export default function Header() {
                   link="/connect"
                 />
               </li>
+              <div>
+                <DarkModeToggle />
+              </div>
             </ul>
           </div>
         </div>

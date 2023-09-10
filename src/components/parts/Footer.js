@@ -2,10 +2,10 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-neutral-900 text-center text-white">
-      <div className="flex justify-center items-center py-10">
-        <div className="flex justify-center items-center">
-          <div className="px-2 text-white hover:text-green-600 duration-300">
+    <footer className="footer-main">
+      <div className="footer-flex-main">
+        <div className="footer-flex-content">
+          <div className="footer-content-icon">
             <a
               href="https://www.facebook.com/yaqubmw"
               target="_blank"
@@ -21,7 +21,7 @@ export default function Footer() {
               </svg>
             </a>
           </div>
-          <div className="px-2 text-white hover:text-green-600 duration-300">
+          <div className="footer-content-icon">
             <a
               href="https://twitter.com/yaqubmw"
               target="_blank"
@@ -37,7 +37,7 @@ export default function Footer() {
               </svg>
             </a>
           </div>
-          <div className="px-2 text-white hover:text-green-600 duration-300">
+          <div className="footer-content-icon">
             <a
               href="mailto:yaqubmw@gmail.com"
               target="_blank"
@@ -54,7 +54,7 @@ export default function Footer() {
               </svg>
             </a>
           </div>
-          <div className="px-2 text-white hover:text-green-600 duration-300">
+          <div className="footer-content-icon">
             <a
               href="https://www.instagram.com/yaqubmw/"
               target="_blank"
@@ -70,7 +70,7 @@ export default function Footer() {
               </svg>
             </a>
           </div>
-          <div className="px-2 text-white hover:text-green-600 duration-300">
+          <div className="footer-content-icon">
             <a
               href="https://id.linkedin.com/in/yaqubmw"
               target="_blank"
@@ -86,7 +86,7 @@ export default function Footer() {
               </svg>
             </a>
           </div>
-          <div className="px-2 text-white hover:text-green-600 duration-300">
+          <div className="footer-content-icon">
             <a
               href="https://github.com/yaqubmw"
               target="_blank"
@@ -105,10 +105,10 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="flex items-center justify-center p-4 text-center text-gray-900 bg-white text-sm font-medium">
-        © 2022 Copyright: &nbsp;
+      <div className="footer-copyright">
+        © 2022 Copyright.&nbsp;
         <Link
-          className="font-semibold hover:text-green-600 duration-300"
+          className="footer-copyright-nyatech"
           href="/"
         >
           Nyatech.

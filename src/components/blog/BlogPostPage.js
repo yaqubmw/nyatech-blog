@@ -21,8 +21,8 @@ async function BlogPostPage({ title, reactions, content, imageUrl, author }) {
         <div className="blog-post-footer">
           <p className="blog-post-footer-content">Reactions: {reactions}</p>
           <div className="blog-post-footer-author">
-            <div className="flex flex-col md:flex-row items-center justify-start">
-              <div className="w-24 h-32 rounded-lg overflow-hidden flex items-center justify-center bg-slate-300">
+            <div className="blog-post-footer-grid">
+              <div className="blog-post-footer-canvas">
                 <Image
                   sizes="100vw"
                   style={{
@@ -34,7 +34,7 @@ async function BlogPostPage({ title, reactions, content, imageUrl, author }) {
                   src={authorData.image}
                 />
               </div>
-              <div className="flex flex-col justify-evenly mx-4 h-32">
+              <div className="blog-post-footer-flex">
                 <p>Author</p>
                 <p className="blog-post-footer-bio-name">
                   {authorData.firstName} {authorData.lastName}
