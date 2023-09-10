@@ -11,12 +11,6 @@ function setLightTheme() {
   localStorage.theme = "light";
 }
 
-function setSystemTheme() {
-  localStorage.removeItem("theme");
-  // Remove the 'dark' class to allow the system to control it
-  document.documentElement.classList.remove("dark");
-}
-
 function DarkModeToggle() {
   const [darkMode, setDarkMode] = useState(false);
 
