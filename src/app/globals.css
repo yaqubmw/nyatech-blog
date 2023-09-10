@@ -46,7 +46,7 @@ main {
 
 /* NAVBAR */
 .navbar {
-  @apply relative flex flex-wrap items-center justify-between px-2 py-2 bg-white text-gray-900 dark:bg-slate-600 dark:text-slate-200 transition-all duration-500;
+  @apply fixed top-0 left-0 w-full z-10 flex flex-wrap items-center justify-between px-2 py-2 bg-white text-gray-900 dark:bg-slate-600 dark:text-slate-200 transition-all duration-500;
 }
 
 .navbar-wrap {
@@ -147,10 +147,13 @@ main {
   @apply flex items-center justify-center h-screen;
 }
 .social-hero-grid {
-  @apply grid gap-4 grid-cols-2 md:grid-cols-3 w-full h-full content-evenly;
+  @apply grid gap-4 grid-cols-3 md:grid-cols-6 w-full h-full content-evenly;
 }
 .social-hero-icon {
   @apply max-w-lg flex items-center justify-center text-gray-900 dark:text-gray-200 dark:hover:text-green-400 hover:text-green-600 transition-all duration-500;
+}
+.social-hero-icon-size {
+  @apply h-16 md:h-28 lg:h-36;
 }
 
 /* FOOTER */
