@@ -1,4 +1,3 @@
-// components/DarkModeToggle.js
 import { useEffect, useState } from "react";
 
 function setDarkTheme() {
@@ -15,7 +14,6 @@ function DarkModeToggle() {
   const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
-    // On page load or when changing themes, set the theme class
     if (localStorage.theme === "dark") {
       setDarkTheme();
       setDarkMode(true);
@@ -23,7 +21,6 @@ function DarkModeToggle() {
       setLightTheme();
       setDarkMode(false);
     } else {
-      // Check the system's color scheme preference
       const systemDarkMode = window.matchMedia(
         "(prefers-color-scheme: dark)"
       ).matches;
