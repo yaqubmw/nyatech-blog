@@ -1,4 +1,4 @@
-import BlogPosts from "@components/blog/BlogPosts";
+import BlogPostsHero from "@components/blog/BlogPostsHero";
 import Hero from "@components/home/Hero";
 import Footer from "@components/parts/Footer";
 import Header from "@components/parts/Header";
@@ -13,7 +13,7 @@ export default function Home() {
       <DefaultTitle text="Follow Me" />
       <SocialHero />
       <DefaultTitle text="Blog" />
-      <BlogPosts />
+      <BlogPostsHero />
       <Footer />
     </main>
   );

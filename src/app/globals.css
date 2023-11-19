@@ -21,15 +21,15 @@ main {
 
 /* DEFAULT-TITLE */
 .default-title-container {
-  @apply flex w-full items-center justify-center bg-white dark:bg-slate-900 py-4 transition-all duration-500;
+  @apply flex w-full items-center justify-center bg-white dark:bg-slate-900 py-8 transition-all duration-500;
 }
 .default-title-content {
-  @apply font-bold text-center text-4xl text-green-600 dark:text-green-500 py-4 transition-all duration-500;
+  @apply font-bold text-center text-4xl text-green-600 dark:text-green-500 py-8 transition-all duration-500;
 }
 
 /* DEFAULT-TITLE-JUMBO */
 .title-jumbo-bg {
-  @apply relative overflow-hidden bg-cover bg-no-repeat;
+  @apply relative h-screen overflow-hidden bg-cover bg-no-repeat;
 }
 .title-jumbo-shade {
   @apply absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-slate-900 bg-opacity-70 bg-fixed;
@@ -83,7 +83,7 @@ main {
 
 /* BLOG-GRID */
 .blog-grid {
-  @apply grid grid-cols-1 gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3;
+  @apply grid grid-cols-1 gap-4 sm:grid-cols-1 md:grid-cols-2;
 }
 .blog-grid-container {
   @apply flex flex-col justify-between max-w-md rounded border border-slate-300 hover:shadow-lg shadow-slate-300 dark:border-slate-700 dark:shadow-slate-800 transition-all duration-500;
@@ -144,21 +144,21 @@ main {
 }
 /* SOCIAL HERO */
 .social-hero-flex {
-  @apply flex items-center justify-center h-screen;
+  @apply flex items-center justify-center h-3/4 py-14;
 }
 .social-hero-grid {
-  @apply grid gap-4 grid-cols-3 md:grid-cols-6 w-full h-full content-evenly;
+  @apply grid gap-8 md:gap-16 grid-cols-3 w-auto h-auto content-evenly;
 }
 .social-hero-icon {
   @apply max-w-lg flex items-center justify-center text-gray-900 dark:text-gray-200 dark:hover:text-green-400 hover:text-green-600 transition-all duration-500;
 }
 .social-hero-icon-size {
-  @apply h-16 md:h-28 lg:h-36;
+  @apply h-16 md:h-28 lg:h-32;
 }
 
 /* FOOTER */
 .footer-main {
-  @apply bg-neutral-900 text-center text-white;
+  @apply bg-black dark:bg-black text-center text-white;
 }
 .footer-flex-main {
   @apply flex justify-center items-center py-10;

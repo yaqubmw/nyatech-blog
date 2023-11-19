@@ -9,9 +9,7 @@ const DefaultTitleJumbo = ({ title, imageUrl }) => {
     <div
       className="title-jumbo-bg"
       style={{
-        backgroundPosition: "50%",
         backgroundImage: `url('${postImage}')`,
-        height: "500px",
       }}
     >
       <div className="title-jumbo-shade">
