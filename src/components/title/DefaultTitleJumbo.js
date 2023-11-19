@@ -7,6 +7,8 @@ const DefaultTitleJumbo = ({ title, imageUrl }) => {
   const postImage = imageUrl ? imageUrl : defaultImageUrl;
   return (
     <div
+      data-testid="jumbo-bg"
+      id="jumbo-bg"
       className="title-jumbo-bg"
       style={{
         backgroundImage: `url('${postImage}')`,

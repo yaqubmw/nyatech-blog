@@ -2,7 +2,7 @@ import propTypes from "prop-types";
 import Link from "next/link";
 
 const Button = ({ text, link, className, onClick }) => {
-  const isExternalLink = link.startsWith("http");
+  const isExternalLink = link.startsWith("https");
 
   const handleClick = (event) => {
     if (isExternalLink) {

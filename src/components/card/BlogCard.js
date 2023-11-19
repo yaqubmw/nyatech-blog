@@ -13,10 +13,10 @@ async function BlogCard({ link, title, reactions, content, imageUrl, author }) {
       ? content.substring(0, maxContentLength) + "..."
       : content;
 
-  const authorData = await fetchAuthor({ authorId: author });
+  const authorData = author ? await fetchAuthor({ authorId: author }) : {};
   return (
-    <div className="blog-grid-container">
-      <Link href={`/blog/${link}`}>
+    <Link id="blog-link" data-testid="blog-link" href={`/blog/${link}`}>
+      <div className="blog-grid-container">
         <div className="blog-grid-img">
           {imageUrl ? (
             <Image
@@ -44,18 +44,15 @@ async function BlogCard({ link, title, reactions, content, imageUrl, author }) {
             />
           )}
         </div>
-      </Link>
-      <Link href={`/blog/${link}`}>
+
         <div className="blog-grid-section">
           <div className="blog-grid-title">{title}</div>
         </div>
-      </Link>
-      <Link href={`/blog/${link}`}>
+
         <div className="blog-grid-section">
           <p className="blog-grid-content">{trimmedContent}</p>
         </div>
-      </Link>
-      <Link href={`/blog/${link}`}>
+
         <div className="blog-grid-footer">
           <p className="blog-grid-footer-content">Reactions: {reactions}</p>
           <p className="blog-grid-footer-content">
@@ -65,8 +62,8 @@ async function BlogCard({ link, title, reactions, content, imageUrl, author }) {
             </span>
           </p>
         </div>
-      </Link>
-    </div>
+      </div>
+    </Link>
   );
 }
 
