@@ -1,15 +1,9 @@
-## Getting Started
+## Unit Testing
 
-First, run the development server:
+Run unit testing using:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+yarn test
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 
